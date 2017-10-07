@@ -2,20 +2,23 @@
     <!DOCTYPE html>
     <html lang="zh-cn">
     
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="silverbamboo">
-    <title>关于自增（自减）运算的一点问题 - silverbamboo</title>
-    <meta name="author" content="Bamboo Gan">
-    
-    
-        <link rel="icon" href="https://bamboo-gan.github.io/assets/images/favicon.ico">
-    
-    
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
-    
-    <meta name="description" content="问题的引出先来看一段代码  1234var a = 1;var b = ++a + ++a;console.log(a); // 3console.log(b); //5  分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content="silverbamboo">
+        <title>
+            关于自增（自减）运算的一点问题 - silverbamboo
+        </title>
+        <meta name="author" content="Bamboo Gan">
+        
+                
+                    <link rel="icon" href="https://bamboo-gan.github.io/assets/images/favicon.ico">
+                    
+                        
+                            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+                            
+                                <meta name="description" content="问题的引出先来看一段代码  1234var a = 1;var b = ++a + ++a;console.log(a); // 3console.log(b); //5  分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="关于自增（自减）运算的一点问题">
@@ -27,24 +30,24 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于自增（自减）运算的一点问题">
 <meta name="twitter:description" content="问题的引出先来看一段代码  1234var a = 1;var b = ++a + ++a;console.log(a); // 3console.log(b); //5  分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.">
-    
-    
-        
-    
-    
-        <meta property="og:image" content="https://bamboo-gan.github.io/assets/images/avatar.png"/>
-    
-    
-    
-    
-    <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
-    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
-    <!--STYLES END-->
-    
-    
+                                    
+                                            
+                                                
+                                                        
+                                                            
+                                                                    <meta property="og:image" content="https://bamboo-gan.github.io/assets/images/avatar.png" />
+                                                                    
+                                                                        
+                                                                                
+                                                                                        
+                                                                                                        <!--STYLES-->
+                                                                                                        <link rel="stylesheet" href="/assets/css/font-awesome.css">
+                                                                                                            <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+                                                                                                                <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
+                                                                                                                    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+                                                                                                                        <!--STYLES END-->
+                                                                                                                        
+                                                                                                                            
     <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
@@ -55,8 +58,15 @@
     })();
     </script>
 
-</head>
 
+
+                                                                                                                                <!--SCRIPTS-->
+                                                                                                                                <script src="/assets/js/jquery.js"></script>
+                                                                                                                                    <script src="/assets/js/jquery.fancybox.js"></script>
+                                                                                                                                        <script src="/assets/js/jquery.fancybox-thumbs.js"></script>
+                                                                                                                                            <script src="/assets/js/tranquilpeak.js"></script>
+                                                                                                                                                <!--SCRIPTS END-->
+    </head>
 
         <body>
             <div id="blog">
