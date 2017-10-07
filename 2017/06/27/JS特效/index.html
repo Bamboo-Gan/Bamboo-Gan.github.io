@@ -1,0 +1,735 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-cn">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="silverbamboo">
+    <title>JS特效 - silverbamboo</title>
+    <meta name="author" content="Bamboo Gan">
+    
+    
+        <link rel="icon" href="https://bamboo-gan.github.io/assets/images/favicon.ico">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="String内置对象字符串连接和截取 concat 连接两个字符串，返回新的字符串 123456 var str1 = &quot;abc&quot;; var str2 = &quot;123&quot;; var str3 = str1.concat(str2);console.log(str1);console.log(str2);console.log(str3);">
+<meta name="keywords" content="javscript">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="JS特效">
+<meta property="og:url" content="https://bamboo-gan.github.io/2017/06/27/JS特效/index.html">
+<meta property="og:site_name" content="silverbamboo">
+<meta property="og:description" content="String内置对象字符串连接和截取 concat 连接两个字符串，返回新的字符串 123456 var str1 = &quot;abc&quot;; var str2 = &quot;123&quot;; var str3 = str1.concat(str2);console.log(str1);console.log(str2);console.log(str3);">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://ox5d07w4x.bkt.clouddn.com/bg-5.jpg 'sunset'">
+<meta property="og:updated_time" content="2017-10-07T08:55:38.356Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS特效">
+<meta name="twitter:description" content="String内置对象字符串连接和截取 concat 连接两个字符串，返回新的字符串 123456 var str1 = &quot;abc&quot;; var str2 = &quot;123&quot;; var str3 = str1.concat(str2);console.log(str1);console.log(str2);console.log(str3);">
+<meta name="twitter:image" content="http://ox5d07w4x.bkt.clouddn.com/bg-5.jpg 'sunset'">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="https://bamboo-gan.github.io/assets/images/avatar.png"/>
+    
+    
+    
+    
+        
+            <meta property="og:image" content="http://ox5d07w4x.bkt.clouddn.com/bg-5.jpg" />
+            <meta class="swiftype" name="image" data-type="enum" content="http://ox5d07w4x.bkt.clouddn.com/bg-5.jpg" />
+        
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+    <!--STYLES END-->
+    
+    
+    <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?de4a5b0a6cea0c367db1b23faf721b8d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+</head>
+
+
+        <body>
+            <div id="blog">
+                <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="5">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">silverbamboo</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+        </a>
+    
+</header>
+
+                    <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="5">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+                </a>
+                <h4 class="sidebar-profile-name">Bamboo Gan</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">首页</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">分类</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                        <span class="sidebar-button-desc">标签</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">归档</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">搜索</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">关于</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+                        
+                            <div id="main" data-behavior="5" class="
+                        hasCoverMetaIn
+                        ">
+                                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            JS特效
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time itemprop="datePublished" datetime="2017-06-27T09:41:35+08:00">
+	
+		    6月 27, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/前端学习/">前端学习</a>
+
+
+            
+                <span class="page-pv">     
+                &nbsp;本文点击量&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+                </span>
+</div>
+    
+</div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <!--excerpt-->
+<blockquote>
+<h4 id="slice-根据索引值和索引值截取字符串"><a href="#slice-根据索引值和索引值截取字符串" class="headerlink" title="slice()  根据索引值和索引值截取字符串"></a><strong>slice()  根据索引值和索引值截取字符串</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">2</span>)); <span class="comment">//从索引截取到最后</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">2</span>, <span class="number">5</span>)); <span class="comment">//从索引截,包左不包右</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">-3</span>)); <span class="comment">//后几个</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">5</span>, <span class="number">2</span>)); <span class="comment">//空字符串</span></div></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="substr-根据索引值和长度值截取字符串"><a href="#substr-根据索引值和长度值截取字符串" class="headerlink" title="substr() 根据索引值和长度值截取字符串"></a><strong>substr() 根据索引值和长度值截取字符串</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">2</span>)); <span class="comment">//从索引截取到最后</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">2</span>, <span class="number">6</span>)); <span class="comment">//从索引截,长度个字符串</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">-3</span>)); <span class="comment">//后几个</span></div></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="substring-根据索引值和索引值截取字符串"><a href="#substring-根据索引值和索引值截取字符串" class="headerlink" title="substring() 根据索引值和索引值截取字符串"></a><strong>substring() 根据索引值和索引值截取字符串</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">2</span>)); <span class="comment">//从索引截取到最后</span></div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">2</span>, <span class="number">5</span>)); <span class="comment">//从索引截,包左不包右</span></div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">-1</span>)); <span class="comment">//全部截取</span></div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">5</span>, <span class="number">2</span>)); <span class="comment">//只能调换,同第二种</span></div></pre></td></tr></table></figure>
+<h3 id="特殊方法"><a href="#特殊方法" class="headerlink" title="特殊方法"></a>特殊方法</h3><blockquote>
+<h4 id="trim-去除前后空格"><a href="#trim-去除前后空格" class="headerlink" title="trim() 去除前后空格"></a><strong>trim() 去除前后空格</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str1 = <span class="string">"   a   b   c   "</span>;</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"><span class="built_in">console</span>.log(str1.trim());</div></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="replace-替换"><a href="#replace-替换" class="headerlink" title="replace() 替换"></a><strong>replace() 替换</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str2 = <span class="string">"Today is fine day,today is fine day a!!!"</span></div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str2.replace(<span class="regexp">/today/gi</span>, <span class="string">"tomorrow"</span>));<span class="comment">//g:全部替换，i：忽略大小写</span></div></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="split-字符串变数组"><a href="#split-字符串变数组" class="headerlink" title="split() 字符串变数组"></a><strong>split() 字符串变数组</strong></h4></blockquote>
+<ul>
+<li><p><strong>无参，是把字符串作为一个元素添加进数组中</strong></p>
+</li>
+<li><p><strong>空字符串，分隔字符串中每一个字符，分别添加进入数组中</strong></p>
+</li>
+<li><p><strong>指定字符分隔数组：特殊符号将不会出现在数组的任意一个元素中</strong></p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str3 = <span class="string">"关羽|张飞|刘备"</span>;</div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="string">''</span>));<span class="comment">//(8) ["关", "羽", "|", "张", "飞", "|", "刘", "备"]</span></div><div class="line"><span class="built_in">console</span>.log(str3.split());<span class="comment">//["关羽|张飞|刘备"]</span></div><div class="line"><span class="built_in">console</span>.log(str3);<span class="comment">//关羽|张飞|刘备</span></div><div class="line"><span class="built_in">console</span>.log(str3.split(<span class="string">"|"</span>));<span class="comment">//(3) ["关羽", "张飞", "刘备"]</span></div></pre></td></tr></table></figure>
+<h3 id="转换大小写-amp-其他操作"><a href="#转换大小写-amp-其他操作" class="headerlink" title="转换大小写&amp;其他操作"></a>转换大小写&amp;其他操作</h3><blockquote>
+<h4 id="toLowerCase-amp-toUpperCase"><a href="#toLowerCase-amp-toUpperCase" class="headerlink" title="toLowerCase() &amp; toUpperCase()"></a><strong>toLowerCase() &amp; toUpperCase()</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"abcdEFG"</span>;</div><div class="line"></div><div class="line"><span class="comment">//转换成小写</span></div><div class="line"><span class="built_in">console</span>.log(str.toLowerCase());</div><div class="line"><span class="comment">//转换成大写</span></div><div class="line"><span class="built_in">console</span>.log(str.toUpperCase());</div></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a><strong>其他操作</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"你好"</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(str.anchor()) <span class="comment">//&lt;a name="undefined"&gt;你好&lt;/a&gt;</span></div><div class="line"><span class="built_in">console</span>.log(str.big()) <span class="comment">//&lt;big&gt;你好&lt;/big&gt;</span></div><div class="line"><span class="built_in">console</span>.log(str.sub()) <span class="comment">//&lt;sub&gt;你好&lt;/sub&gt;</span></div><div class="line"><span class="built_in">console</span>.log(str.sup()) <span class="comment">//&lt;sup&gt;你好&lt;/sup&gt;</span></div><div class="line"><span class="built_in">console</span>.log(str.link(<span class="string">"http://www.baidu.com"</span>)); <span class="comment">//&lt;a href="http://www.baidu.com"&gt;你好&lt;/a&gt;</span></div><div class="line"><span class="built_in">console</span>.log(str.bold()) <span class="comment">//&lt;b&gt;你好&lt;/b&gt;</span></div></pre></td></tr></table></figure>
+            
+    
+    <div class="image-gallery">
+        <div class="image-gallery-metabar">
+            <span>Gallery : 1 images</span>
+        </div>
+        <div class="image-gallery-photos ">
+            
+            
+            <div class="photo-box">
+                <a class="photo-box-inner fancybox" data-fancybox-group="gallery-cj8gwxurn000258qp8kv5wk8a"
+                   title="sunset" href="http://ox5d07w4x.bkt.clouddn.com/bg-5.jpg">
+                    <img class="photo" src="http://ox5d07w4x.bkt.clouddn.com/bg-5.jpg" itemprop="image">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/javscript/">javscript</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/06/医道与医心：乱世医者端木蓉/"  data-tooltip="医道与医心：乱世医者端木蓉">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/24/Jquery的ajax方法学习/" data-tooltip="Jquery的ajax方法学习">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-weibo"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/06/27/JS特效/&amp;title=JS特效">
+                    <i class="fa fa-qq"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-star"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-renren"></i>
+                </a>
+            </li>
+        
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                                    <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 Bamboo Gan. All Rights Reserved.
+    </span>
+</footer>
+
+                            </div>
+                            
+                                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/06/医道与医心：乱世医者端木蓉/"  data-tooltip="医道与医心：乱世医者端木蓉">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/24/Jquery的ajax方法学习/" data-tooltip="Jquery的ajax方法学习">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-weibo"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/06/27/JS特效/&amp;title=JS特效">
+                    <i class="fa fa-qq"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-star"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-renren"></i>
+                </a>
+            </li>
+        
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                                </div>
+                                <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-weibo"></i><span>分享到 Weibo</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/06/27/JS特效/&amp;title=JS特效">
+                    <i class="fa fa-qq"></i><span>分享到 QQ</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-star"></i><span>分享到 Qzone</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                    <i class="fa fa-renren"></i><span>分享到 Renren</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+                                    
+            </div>
+            
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar.png" alt="作者的图片"/>
+        
+            <h4 id="about-card-name">Bamboo Gan</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Shanghai,China
+            </div>
+        
+    </div>
+</div>
+
+                <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">没有找到文章</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://bamboo-gan.github.io/2017/06/05/关于自增（自减）运算的一点问题/">
+                            <h3 class="media-heading">关于自增（自减）运算的一点问题</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年6月5日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h2 id="问题的引出"><a href="#问题的引出" class="headerlink" title="问题的引出"></a>问题的引出</h2><p>先来看一段代码 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = ++a + ++a;</div><div class="line">console.log(a); // 3</div><div class="line">console.log(b); //5</div></pre></td></tr></table></figure>
+<blockquote>
+<p>分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.</p>
+</blockquote></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                            <h3 class="media-heading">Jquery的ajax方法学习</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年6月24日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h1 id="Jquery的ajax方法"><a href="#Jquery的ajax方法" class="headerlink" title="Jquery的ajax方法"></a>Jquery的ajax方法</h1><h2 id="Jquery里面的get方法"><a href="#Jquery里面的get方法" class="headerlink" title="Jquery里面的get方法"></a>Jquery里面的get方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'01.jq_get.php'</span>,&#123;<span class="attr">name</span>:<span class="string">"jack"</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;,<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">                <span class="comment">// 直接打印结果</span></div><div class="line">                <span class="built_in">console</span>.log(data);</div><div class="line">                <span class="comment">// 打印属性值</span></div><div class="line">                <span class="built_in">console</span>.log(data.name);</div><div class="line">                <span class="built_in">console</span>.log(data.color);</div><div class="line">            &#125;,<span class="string">'json'</span>);</div></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title=""></a></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                            <img class="media-image" src="http://ox5d07w4x.bkt.clouddn.com/bg-5.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://bamboo-gan.github.io/2017/06/27/JS特效/">
+                            <h3 class="media-heading">JS特效</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年6月27日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h2 id="String内置对象"><a href="#String内置对象" class="headerlink" title="String内置对象"></a>String内置对象</h2><h3 id="字符串连接和截取"><a href="#字符串连接和截取" class="headerlink" title="字符串连接和截取"></a>字符串连接和截取</h3><blockquote>
+<h4 id="concat-连接两个字符串，返回新的字符串"><a href="#concat-连接两个字符串，返回新的字符串" class="headerlink" title="concat 连接两个字符串，返回新的字符串"></a><strong>concat 连接两个字符串，返回新的字符串</strong></h4></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">var</span> str1 = <span class="string">"abc"</span>;</div><div class="line"> <span class="keyword">var</span> str2 = <span class="string">"123"</span>;</div><div class="line"> <span class="keyword">var</span> str3 = str1.concat(str2);</div><div class="line"><span class="built_in">console</span>.log(str1);</div><div class="line"><span class="built_in">console</span>.log(str2);</div><div class="line"><span class="built_in">console</span>.log(str3);</div></pre></td></tr></table></figure></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://bamboo-gan.github.io/2017/10/06/医道与医心：乱世医者端木蓉/">
+                            <img class="media-image" src="http://ox5d07w4x.bkt.clouddn.com/%E7%AB%AF%E6%9C%A8%E8%93%89500-300.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://bamboo-gan.github.io/2017/10/06/医道与医心：乱世医者端木蓉/">
+                            <h3 class="media-heading">医道与医心：乱世医者端木蓉</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年10月6日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>昨日，玄机更新了秦时明月特别篇，或者说端木蓉特别篇–医者入世。与此前不同的是这是秦时十周年几年的产物，原创是来自民间，玄机此前举办了一次征文大赛，此次更新的特别篇就是参赛作品中最佳人气奖的《医者入世》。<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="没有找到文章"
+                data-message-one="找到 1 篇文章"
+                data-message-other="找到 {n} 篇文章">
+                找到 4 篇文章
+            </p>
+        </div>
+    </div>
+</div>
+
+                    
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+                        <!--SCRIPTS-->
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.fancybox.js"></script>
+<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
+<script src="/assets/js/tranquilpeak.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://bamboo-gan.github.io/2017/06/27/JS特效/';
+                 
+                    this.page.identifier = '2017/06/27/JS特效/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'bamboogan';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+                            <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        </body>
+
+    </html>
