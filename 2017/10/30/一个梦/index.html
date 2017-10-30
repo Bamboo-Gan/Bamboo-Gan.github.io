@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="generator" content="silverbamboo">
         <title>
-            Jquery的ajax方法学习 - silverbamboo
+            一个梦 - silverbamboo
         </title>
         <meta name="author" content="Bamboo Gan">
         
@@ -16,18 +16,18 @@
                     <link rel="icon" href="https://bamboo-gan.github.io/assets/images/favicon.ico">
                     
                         
-                                <meta name="description" content="Jquery里面的get方法1234567$.get(&apos;01.jq_get.php&apos;,&amp;#123;name:&quot;jack&quot;,age:18&amp;#125;,function (data) &amp;#123;                // 直接打印结果                console.log(data);                // 打印属性值                conso">
-<meta name="keywords" content="javascript">
+                                <meta name="description" content="很长时间以来，都没有睡过一个踏踏实实的觉了，我一直都不怎么相信梦这种东西，然而，当它一次又一次的掠夺你心里的秘密，一次又一次勾起你那陈年的相思，一次又一次浮现同一个人，在不同的梦里。那时候你希望，它是真的。">
+<meta name="keywords" content="情感">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Jquery的ajax方法学习">
-<meta property="og:url" content="https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/index.html">
+<meta property="og:title" content="一个梦">
+<meta property="og:url" content="https://bamboo-gan.github.io/2017/10/30/一个梦/index.html">
 <meta property="og:site_name" content="silverbamboo">
-<meta property="og:description" content="Jquery里面的get方法1234567$.get(&apos;01.jq_get.php&apos;,&amp;#123;name:&quot;jack&quot;,age:18&amp;#125;,function (data) &amp;#123;                // 直接打印结果                console.log(data);                // 打印属性值                conso">
+<meta property="og:description" content="很长时间以来，都没有睡过一个踏踏实实的觉了，我一直都不怎么相信梦这种东西，然而，当它一次又一次的掠夺你心里的秘密，一次又一次勾起你那陈年的相思，一次又一次浮现同一个人，在不同的梦里。那时候你希望，它是真的。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-08T05:24:04.614Z">
+<meta property="og:updated_time" content="2017-10-30T01:37:32.499Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jquery的ajax方法学习">
-<meta name="twitter:description" content="Jquery里面的get方法1234567$.get(&apos;01.jq_get.php&apos;,&amp;#123;name:&quot;jack&quot;,age:18&amp;#125;,function (data) &amp;#123;                // 直接打印结果                console.log(data);                // 打印属性值                conso">
+<meta name="twitter:title" content="一个梦">
+<meta name="twitter:description" content="很长时间以来，都没有睡过一个踏踏实实的觉了，我一直都不怎么相信梦这种东西，然而，当它一次又一次的掠夺你心里的秘密，一次又一次勾起你那陈年的相思，一次又一次浮现同一个人，在不同的梦里。那时候你希望，它是真的。">
                                     
                                             
                                                 
@@ -243,20 +243,20 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Jquery的ajax方法学习
+            一个梦
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-06-24T05:21:18+08:00">
+    <time itemprop="datePublished" datetime="2017-10-30T09:00:21+08:00">
 	
-		    Jun 24, 2017
+		    Oct 30, 2017
     	
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/前端学习/">前端学习</a>
+    <a class="category-link" href="/categories/随笔/">随笔</a>
 
 
             
@@ -269,19 +269,21 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h2 id="Jquery里面的get方法"><a href="#Jquery里面的get方法" class="headerlink" title="Jquery里面的get方法"></a>Jquery里面的get方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'01.jq_get.php'</span>,&#123;<span class="attr">name</span>:<span class="string">"jack"</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;,<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">                <span class="comment">// 直接打印结果</span></div><div class="line">                <span class="built_in">console</span>.log(data);</div><div class="line">                <span class="comment">// 打印属性值</span></div><div class="line">                <span class="built_in">console</span>.log(data.name);</div><div class="line">                <span class="built_in">console</span>.log(data.color);</div><div class="line">            &#125;,<span class="string">'json'</span>);</div></pre></td></tr></table></figure>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><ul>
-<li>参数1：url</li>
-<li>参数2：发送的数据，支持直接写js对象，字面量对象，可选参数</li>
-<li>参数3：回调函数</li>
-<li>参数4：从服务端获取的数据类型，可选参数，如果写为json，jq内部会帮我们进行一个JSON.parse()的转化，不写的话，需要手动转化</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'jqGet.php'</span>,&#123;<span class="attr">name</span>:<span class="string">"jack"</span>,<span class="attr">age</span>:<span class="number">90</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">           <span class="built_in">console</span>.log(data);</div><div class="line">           data = <span class="built_in">JSON</span>.parse(data);</div><div class="line">           <span class="built_in">console</span>.log(data.name);</div><div class="line">           <span class="built_in">console</span>.log(data.color);</div><div class="line">       &#125;)</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="Jquery里面的POST方法"><a href="#Jquery里面的POST方法" class="headerlink" title="Jquery里面的POST方法"></a>Jquery里面的POST方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 跟$.get用法及其类似</span></div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">			参数1:url</span></div><div class="line"><span class="comment">			参数2:发送的数据 支持 直接写js对象的方式</span></div><div class="line"><span class="comment">			参数3:回调函数</span></div><div class="line"><span class="comment">			参数4:从服务端获取的 数据类型 可以不写,如果写为json jq内部 会帮我们进行一个 JSON.parse()的转化 </span></div><div class="line"><span class="comment">		*/</span></div><div class="line">		$.post(<span class="string">'02.jq_post.php'</span>,&#123;<span class="attr">name</span>:<span class="string">"榴莲炒饭"</span>,<span class="attr">skill</span>:<span class="string">"熏人"</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">			<span class="built_in">console</span>.log(data);</div><div class="line">		&#125;,<span class="string">'json'</span>)</div></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="comment">//关于php中字符窜的拼接，都是发送的数据，返回</span></div><div class="line"><span class="keyword">echo</span> <span class="string">'&#123;"name":"'</span>.$_POST[<span class="string">'name'</span>].<span class="string">'","skill":"'</span>.$_POST[<span class="string">'skill'</span>].<span class="string">'"&#125;'</span></div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
-<hr>
-<h2 id="Jquery里面的ajax方法"><a href="#Jquery里面的ajax方法" class="headerlink" title="Jquery里面的ajax方法"></a>Jquery里面的ajax方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 使用jq 发送ajax</span></div><div class="line">			<span class="comment">/*</span></div><div class="line"><span class="comment">				常见参数:</span></div><div class="line"><span class="comment">					url:请求的地址</span></div><div class="line"><span class="comment">					success:请求成功的回调函数</span></div><div class="line"><span class="comment">					type:不写是get 可以指定 get,post</span></div><div class="line"><span class="comment">					dataType:数据的类型</span></div><div class="line"><span class="comment">					data:发数据 可以写js对象</span></div><div class="line"><span class="comment">					beforeSend:发送之前调用的匿名函数</span></div><div class="line"><span class="comment">						可以return false 阻止该次请求</span></div><div class="line"><span class="comment">						验证用户的数据 是否填了</span></div><div class="line"><span class="comment">					error:请求失败以后 会调用</span></div><div class="line"><span class="comment">			*/</span></div><div class="line">			$.ajax(&#123;</div><div class="line">				url:<span class="string">'03.jq_ajax123123123.php'</span>,</div><div class="line">				success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">					<span class="built_in">console</span>.log(data);</div><div class="line">				&#125;,</div><div class="line">				type:<span class="string">'post'</span>,</div><div class="line">				dataType:<span class="string">'json'</span>,</div><div class="line">				data:&#123;<span class="string">"name"</span>:<span class="string">"干锅花菜"</span>,<span class="string">"skill"</span>:<span class="string">"上天"</span>&#125;,</div><div class="line">				beforeSend:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">					<span class="built_in">console</span>.log(<span class="string">'发送之前调用'</span>);</div><div class="line">					<span class="comment">// return false;</span></div><div class="line">				&#125;,</div><div class="line">				error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">					<span class="built_in">console</span>.log(<span class="string">'请求失败了'</span>);</div><div class="line">				&#125;</div><div class="line">			&#125;)</div><div class="line">		&#125;);</div></pre></td></tr></table></figure>
+            <blockquote>
+<p>很长时间以来，都没有睡过一个踏踏实实的觉了，我一直都不怎么相信梦这种东西，然而，当它一次又一次的掠夺你心里的秘密，一次又一次勾起你那陈年的相思，一次又一次浮现同一个人，在不同的梦里。那时候你希望，它是真的。</p>
+</blockquote>
+<a id="more"></a>
+<p><strong><em>那个梦。</em></strong> 我不知道，能不能跟上一次的梦，或者上上次，能有点联系。但直觉告诉我，有一件事情是可以联系到一起的。<strong><em>一个电话。</em></strong> 也许是在两个月前，在梦里，我接到过一通电话，她似乎有事情要告诉我，但最终却什么都没有说，而我只有一个印象，她好像要去江西。你知道，梦它很飘渺、神秘，因为你不知道，什么时候会断片，什么时候会突然醒过来。</p>
+<p>几个月过去，当我再次回到梦里，我已经在老家了。而我的老家就在江西。我原以为我会遇见她，可并不是，梦里也不是能心想事成的。</p>
+<p><strong><em>但是我有了一个可能找到她的契机。</em></strong> 在一个不知名的小村庄里，我遇见了她的姐姐，虽然我并不知道现实中，她到底有没有这样一个姐姐，但是通过我的观察来看，应当是没有。可奇怪的是，在梦里我分明遇见了，而且还能叫得出名字，单名一个茜字。那是在一条狭窄的巷子里，我与一个孕妇擦身而过，就在那一刻我还叫出了她的名字。我不知道为什么会这样，因为照常理，我不应该直呼她的姓名。现实中也是常常如此，当我们突然做出一些，违背自己习惯的事情的时候，往往是因为一个关键的人。</p>
+<p>我想在这里，我应该使用第一人称对话的方式，来说明我们之间的沟通，我并不打算这样。她姐姐告诉我，她在哪里，还想带我过去找她，我并没有答应，我不忍心麻烦她。问清她的具体位置以后，我便与她姐姐告别了。</p>
+<p>我一个人朝着小河边走过来，远远望见零星几个小孩，在河边嬉戏，并没有看到那个熟悉的身影。继续向前，迈过眼前堆堆叠叠的碎石，在那丛类似芦苇植物的尽头，在清风摇曳的干黄的下摆那头，隐约显露出来一个小小的身影。在河岸延伸出去的那一角，<strong><em>我找到了她</em></strong>。</p>
+<p>我不知道该怎样去计算这样一个时间，按照现实世界我似乎已经有三年以上的时间没有看到过她，听到关于她的一切。而在梦里，又似乎只有短短的两个月，不算长，但我知道这对于单相思的人来说，太长了，长到不相见，对于你每天都是一种煎熬。</p>
+<p>见到她的那一刻，很开心，也许还有些许的羞涩，我不知道要跟她怎样诉说这些年，那些年里我的，对于她的情感，就像这涓涓细流<small>是的，涓涓细流，不再像当初发源的时候那么汹涌热烈，勇敢无畏</small>，从发源的高山滚滚而下，在无数的岔道口，分流而去，又有谁还记得当初和大海的誓言呢！我没忘，可这并不够。</p>
+<p>我问她，为什么之前打电话给我，似乎想说些什么，最后又没有说。</p>
+<p>那个答案，可以铭记一辈子，不管是不是在梦里，而我也可以拿着这个答案自欺欺人。她说想送我一个礼物，但我不知道为什么。但在我听到这个答案的时候，我看见她脸上漾着微笑，那真挚的小酒窝，很快印在我心里，像一朵花，开始慢慢撑开我的心房，最后喷涌而出。我没有再去问什么，对于我来说，现在能见到她就是最好的礼物。</p>
+<p>梦到了这里，似乎应该结束，事实并非如此，但我不想再叙述下去。一来，后面的情节很少，但比较乱，脱离现实太多，出现了解释不通的人；二来，梦对于我来说，这样就够了，戛然而止，最美好的已经留下。</p>
+<p>后面的情节只有一个：她说要请我吃饭，我们去了一家小吃店，然后遇见了几个熟悉的朋友，但他们不应该会出现在这里。就在这里停下了。</p>
 
             
         </div>
@@ -291,7 +293,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/javascript/">javascript</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/情感/">情感</a>
 
             </div>
         
@@ -301,7 +303,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/27/JS特效/"  data-tooltip="JS特效">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -309,7 +311,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/05/关于自增（自减）运算的一点问题/" data-tooltip="关于自增（自减）运算的一点问题">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/23/LESS学习笔记/" data-tooltip="LESS学习笔记">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -327,7 +329,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-weibo"></i>
                 </a>
             </li>
@@ -335,7 +337,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/&amp;title=Jquery的ajax方法学习">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/10/30/一个梦/&amp;title=一个梦">
                     <i class="fa fa-qq"></i>
                 </a>
             </li>
@@ -343,7 +345,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-star"></i>
                 </a>
             </li>
@@ -351,7 +353,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-renren"></i>
                 </a>
             </li>
@@ -401,7 +403,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/27/JS特效/"  data-tooltip="JS特效">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -409,7 +411,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/06/05/关于自增（自减）运算的一点问题/" data-tooltip="关于自增（自减）运算的一点问题">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/10/23/LESS学习笔记/" data-tooltip="LESS学习笔记">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -427,7 +429,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-weibo"></i>
                 </a>
             </li>
@@ -435,7 +437,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/&amp;title=Jquery的ajax方法学习">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/10/30/一个梦/&amp;title=一个梦">
                     <i class="fa fa-qq"></i>
                 </a>
             </li>
@@ -443,7 +445,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-star"></i>
                 </a>
             </li>
@@ -451,7 +453,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-renren"></i>
                 </a>
             </li>
@@ -482,7 +484,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-weibo"></i><span>Share on Weibo</span>
                 </a>
             </li>
@@ -490,7 +492,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/&amp;title=Jquery的ajax方法学习">
+                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=https://bamboo-gan.github.io/2017/10/30/一个梦/&amp;title=一个梦">
                     <i class="fa fa-qq"></i><span>Share on QQ</span>
                 </a>
             </li>
@@ -498,7 +500,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-star"></i><span>Share on Qzone</span>
                 </a>
             </li>
@@ -506,7 +508,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/">
+                <a class="share-option-btn" target="new" href="http://widget.renren.com/dialog/share?resourceUrl=https://bamboo-gan.github.io/2017/10/30/一个梦/">
                     <i class="fa fa-renren"></i><span>Share on Renren</span>
                 </a>
             </li>
@@ -727,9 +729,9 @@
                     
                         <script>
                             var disqus_config = function() {
-                                this.page.url = 'https://bamboo-gan.github.io/2017/06/24/Jquery的ajax方法学习/';
+                                this.page.url = 'https://bamboo-gan.github.io/2017/10/30/一个梦/';
                                 
-                                this.page.identifier = '2017/06/24/Jquery的ajax方法学习/';
+                                this.page.identifier = '2017/10/30/一个梦/';
                                 
                             };
                             (function() {
