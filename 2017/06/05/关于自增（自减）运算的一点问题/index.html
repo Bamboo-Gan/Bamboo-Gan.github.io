@@ -386,12 +386,10 @@
         
         
             
-                <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjAzNC84NTk4">
-    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-<!-- City版安装代码已完成 -->
-                
+            
         
     </div>
 </article>
@@ -731,19 +729,23 @@
 <!--SCRIPTS END-->
 
     
-        <script type="text/javascript">
-            (function(d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') {
-                    return;
-                };
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'https://bamboo-gan.github.io/2017/06/05/关于自增（自减）运算的一点问题/';
+                 
+                    this.page.identifier = '2017/06/05/关于自增（自减）运算的一点问题/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'bamboogan';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                // s.src="https://ox5d07w4x.bkt.clouddn.com/embed.js";
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
         </script>
-        
+    
 
 
                             <!-- <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
