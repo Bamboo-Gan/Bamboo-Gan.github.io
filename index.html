@@ -323,6 +323,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Jquery里面的get方法"><a href="#Jquery里面的get方法" class="headerlink" title="Jquery里面的get方法"></a>Jquery里面的get方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$.get(<span class="string">'01.jq_get.php'</span>,&#123;<span class="attr">name</span>:<span class="string">"jack"</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;,<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</div><div class="line">                <span class="comment">// 直接打印结果</span></div><div class="line">                <span class="built_in">console</span>.log(data);</div><div class="line">                <span class="comment">// 打印属性值</span></div><div class="line">                <span class="built_in">console</span>.log(data.name);</div><div class="line">                <span class="built_in">console</span>.log(data.color);</div><div class="line">            &#125;,<span class="string">'json'</span>);</div></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>参数1：url</li>
+<li>参数2：发送的数据，支持直接写js对象，字面量对象，可选参数</li>
+<li>参数3：回调函数</li>
+<li>参数4：从服务端获取的数据类型，可选参数，如果写为json，jq内部会帮我们进行一个JSON.parse()的转化，不写的话，需要手动转化
         
           <p class="article-more-link">
             <a href="/2017/06/24/Jquery的ajax方法学习/#more">阅读全文 »</a>
