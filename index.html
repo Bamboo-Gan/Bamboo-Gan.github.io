@@ -346,7 +346,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="问题的引出"><a href="#问题的引出" class="headerlink" title="问题的引出"></a>问题的引出</h2><p>先来看一段代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">var b = ++a + ++a;</div><div class="line">console.log(a); // 3</div><div class="line">console.log(b); //5</div></pre></td></tr></table></figure></p>
+        <h2 id="问题的引出"><a href="#问题的引出" class="headerlink" title="问题的引出"></a>问题的引出</h2><p>先来看一段代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b = ++a + ++a;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">//5</span></div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>分析：这里a的计算过程很简单，第一个a是前置自增，所以一开始参与运算就自己变成2，后面一个a也是一样，但是第二个a的值自增之前已经是2了，所以自增之后就是3，那么赋值给b就是2+3=5了；而a的最终值是最后一次自增后的3.</p>
 </blockquote>
