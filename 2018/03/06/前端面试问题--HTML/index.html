@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7" lang="en"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8" lang="en"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+
+    <meta name="author" content="Bamboo Gan">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+    <link rel="canonical" href="https://bamboo-gan.github.io/2018/03/06/前端面试问题--HTML/">
+
+    
+        <link rel="alternate" href="/atom.xml" type="application/atom+xml">
+    
+
+    
+
+    <script src="/js/modernizr-2.0.js"></script>
+
+    <script src="/js/jquery-1.9.1.js"></script>
+
+    
+    <script>window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+
+            return t;
+        }(document, "script", "twitter-wjs"));</script>
+
+    
+    <link rel="me" href="https://twitter.com/your_twitter">
+    
+
+
+
+    <script src="/js/octo.js"></script>
+
+    <link rel="stylesheet" href="/css/octo.css">
+
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet"
+          type="text/css">
+
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet"
+          type="text/css">
+
+    
+
+</head>
+<body>
+
+<header role="banner">
+    <hgroup>
+        <h1><a href="/">silverbamboo</a></h1>
+        
+    </hgroup>
+</header>
+
+<nav role="navigation">
+    
+        <ul class="subscription" data-subscription="rss">
+            <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+        </ul>
+    
+
+    <form action="http://google.com/search" method="get">
+        <fieldset role="search">
+            <input type="hidden" name="q" value="site:/">
+            <input class="search" type="text" name="q" results="0" placeholder="Search">
+        </fieldset>
+    </form>
+
+    <ul class="main-navigation">
+        
+            <li><a href="/">Blog</a></li>
+        
+            <li><a href="/archives">Archives</a></li>
+        
+            <li><a href="/favorite">favorite</a></li>
+        
+            <li><a href="/category">category</a></li>
+        
+    </ul>
+</nav>
+
+<div id="main">
+    <div id="content">
+        <div>
+    <article class="hentry" role="article">
+        <header>
+            <h1 class="entry-title"></h1>
+            <p class="meta">
+                <time datetime="2018-03-06T14:44:39.352Z" data-updated="true">Tue Mar 06 2018</time>
+            </p>
+        </header>
+        <div class="entry-content">
+            <h1 id="前端面试题–HTML"><a href="#前端面试题–HTML" class="headerlink" title="前端面试题–HTML"></a>前端面试题–HTML</h1><h3 id="1-浏览器的本地存储"><a href="#1-浏览器的本地存储" class="headerlink" title="1. 浏览器的本地存储"></a>1. 浏览器的本地存储</h3><p>在HTML5中提供了<code>sessionStorage</code>和<code>localStorage</code>两种浏览器的本地存储方式。<br><code>sessionStorage</code>用于在本地存储一个会话(session)中的数据，这些数据只有在同一个会话中的页面才能访问并且会话结束之后数据也随之销毁，是会话级别的存储。<br><code>localStorage</code>用于持久化的本地存储，除非主动删除数据，否则数据是不会过期的。</p>
+<h3 id="2-web-storeage和cookie的区别"><a href="#2-web-storeage和cookie的区别" class="headerlink" title="2. web storeage和cookie的区别"></a>2. web storeage和cookie的区别</h3><ul>
+<li><code>cookie</code>的大小是受限制的（大概4K左右）</li>
+<li>每次请求一个新的页面的时候<code>Cookie</code>都会被发送过去，这样无形中浪费了带宽</li>
+<li><code>cookie</code>需要指定作用域，不可以跨域调用</li>
+<li><code>web stroage</code>拥有<code>setltem</code>，<code>getltem</code>等方法,cookie需要前端开发者自己封装setCookie，getCookie</li>
+<li>cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在，而WebStroage津津是为了在本地“存储”数据而生</li>
+<li>IE6，7中的UserData通过简单的代码封装可以统一到所有的浏览器都支持web stroage</li>
+</ul>
+<h3 id="3-请谈谈cookie的弊端"><a href="#3-请谈谈cookie的弊端" class="headerlink" title="3. 请谈谈cookie的弊端"></a>3. 请谈谈cookie的弊端</h3><ul>
+<li>每个特定的域名下最多生成的cookie个数有限制</li>
+<li>IE和opera会清理近期最少使用的cookie，firefox会随机清理cookie</li>
+<li>cookie的最大字节约为4096字节，为了兼容性，一般不能超过4095字节</li>
+<li>安全性问题。如果cookie被人拦截了，那人就可以去的所有的cookie信息。</li>
+</ul>
+<h3 id="4-lt-img-gt-标签上的title属性和alt属性的区别"><a href="#4-lt-img-gt-标签上的title属性和alt属性的区别" class="headerlink" title="4. &lt;img&gt;标签上的title属性和alt属性的区别"></a>4. <code>&lt;img&gt;</code>标签上的<code>title</code>属性和<code>alt</code>属性的区别</h3><ul>
+<li><code>alt</code>属性是为了给那些不能看到你文档中图像的浏览者提供文字说明的，而且长度必须少于100个英文字符或者用户必须保证替换文字尽可能的短。这一属性有助于那些使用本来就不支持图像显示或者图像显示被关闭的浏览器用户，视觉障碍的用户，以及屏幕阅读器的用户。<br><code>title</code>属性为设置该属性的元素提供建设性的信息，使用title属性提供非本质的额外信息。</li>
+</ul>
+<h3 id="5-分别写出以下html标签L文字加粗，下标，居中，字体"><a href="#5-分别写出以下html标签L文字加粗，下标，居中，字体" class="headerlink" title="5. 分别写出以下html标签L文字加粗，下标，居中，字体"></a>5. 分别写出以下html标签L文字加粗，下标，居中，字体</h3><p>加粗：<code>&lt;b&gt;</code>,<code>&lt;strong&gt;</code><br>下标： <code>&lt;sub&gt;</code><br>居中： <code>&lt;center&gt;</code><br>字体： <code>&lt;font&gt;</code>,<code>&lt;basefont&gt;</code></p>
+<h3 id="6-请至少写出5个html5新增的标签，并说明其语义和应用场景"><a href="#6-请至少写出5个html5新增的标签，并说明其语义和应用场景" class="headerlink" title="6. 请至少写出5个html5新增的标签，并说明其语义和应用场景"></a>6. 请至少写出5个html5新增的标签，并说明其语义和应用场景</h3><p><code>selection</code>: 定义文档中的一个章节；<br><code>nav</code> : 定义只包含导航连接的章节<br><code>header</code>: 定义页面或者章节的头部。经常包括logo，页面标题和导航性的目录。<br><code>footer</code>: 定义页面或者章节的尾部，经常包含版权信息，法律信息连接和反馈建议用的地址。<br><code>aside</code>: 定义和页面内容关联度较低的内容–如果被删除，剩下的内容仍然合理。</p>
+<h3 id="7-标签语义化的理解"><a href="#7-标签语义化的理解" class="headerlink" title="7. 标签语义化的理解"></a>7. 标签语义化的理解</h3><ul>
+<li>去掉或者丢失样式的时候能够让页面呈现清晰的结构</li>
+<li>有利于SEO和搜索引擎建立良好的沟通，有助于爬虫抓取更多有效的信息：爬虫依赖于标签来确定上下文和各个关键自的权重；</li>
+<li>方便其他设备，比如：屏幕阅读器，盲人阅读器，移动设备解析，以意义的方式来渲染页面；</li>
+<li>便于团队的开发和维护，语义化更具可读性，遵循W3C标准的团队都遵循这个标准，可以减少差异化</li>
+</ul>
+<h3 id="8-Doctype的作用？严格模式与混杂模式如何区分？有何意义？"><a href="#8-Doctype的作用？严格模式与混杂模式如何区分？有何意义？" class="headerlink" title="8.Doctype的作用？严格模式与混杂模式如何区分？有何意义？"></a>8.Doctype的作用？严格模式与混杂模式如何区分？有何意义？</h3><ul>
+<li><code>&lt;!Doctype&gt;</code>位于文档最前面，处于html标签之前。告知浏览器以何种模式来渲染文档。</li>
+<li>严格模式的排版和JS运作是以该浏览器支持的最高标准运行。</li>
+<li>在混杂模式中，页面以宽松的向后兼容的方式显示，模拟老式浏览器的行为，防止站点无法工作。</li>
+<li>在doctype不存在或者格式不正确的时候会导致文档以混杂模式呈现。</li>
+</ul>
+<h3 id="9-你知道多少种Doctype文档类型？"><a href="#9-你知道多少种Doctype文档类型？" class="headerlink" title="9.你知道多少种Doctype文档类型？"></a>9.你知道多少种Doctype文档类型？</h3><p>标签可以声明三种DTD类型，分别表示严格版本，过渡版本和基于框架的HTML文档。<br>HTML4.0规定了三种文档类型：Strict、Transitional和Frameset;<br>XHTML1.0规定了三种XML文档类型：Strict、Transitional和Frameset;</p>
+<p>Standards(标准)模式也就是严格呈现模式用于呈现遵循最新标准的网页，<br>Quirks（包容）模式也就是松散呈现模式或者兼容模式，用于呈现为传统浏览器而设计的网页。</p>
+<h3 id="10-HTML和XHTML的区别"><a href="#10-HTML和XHTML的区别" class="headerlink" title="10.HTML和XHTML的区别"></a>10.HTML和XHTML的区别</h3><ul>
+<li>XHTML元素必须被正确地嵌套</li>
+<li>XHTML元素必须关闭</li>
+<li>标签名必须使用小写字母</li>
+<li>XHTML元素必须要有根元素</li>
+</ul>
+<h3 id="11-Html5有那些新特性，移除了那些元素"><a href="#11-Html5有那些新特性，移除了那些元素" class="headerlink" title="11.Html5有那些新特性，移除了那些元素"></a>11.Html5有那些新特性，移除了那些元素</h3><ul>
+<li>HTML现在已经不是SGML（标准通用标记语言，XML是其子集）的子集，主要是关于图像，位置，存储，多任务等功能的增加。</li>
+<li>拖拽释放(drag and drap )API</li>
+<li>语义化更好的内容标签（header,nav,footer,aside,article,section）</li>
+<li>音频<code>audio</code>视频<code>video</code>API</li>
+<li>画布canvasAPI</li>
+<li>地理API</li>
+<li>本地离线存储 ：localStorage长期存储数据，浏览器关闭之后数据不会丢失，sessionStroage的数据会在页面会话结束时清除</li>
+<li>表单控件，calendar、date、time、emai、url、search</li>
+<li>新技术webworker，websocket等<br><strong><em>移除的元素</em></strong>：</li>
+<li>纯表现的元素：basefont，big，center，s ，strike，tt,u;</li>
+<li>对可用性产生负面影响的元素：frame，frameset，noframes；</li>
+</ul>
+<h3 id="12-iframe的优缺点"><a href="#12-iframe的优缺点" class="headerlink" title="12. iframe的优缺点"></a>12. iframe的优缺点</h3><p><strong><em>优点</em></strong></p>
+<ul>
+<li>解决加载缓慢的第三方内容如图标和广告的加载问题</li>
+<li>iframe无刷新文件上传</li>
+<li>iframe跨域通信</li>
+</ul>
+<p><strong><em>缺点</em></strong></p>
+<ul>
+<li>iframe会阻塞主页面的onload事件</li>
+<li>无法被一些搜索引擎索引到</li>
+<li>页面会增加http请求</li>
+<li>会产生很多页面不容易管理<h3 id="13-Quirks模式是什么？和Standards模式有何区别？"><a href="#13-Quirks模式是什么？和Standards模式有何区别？" class="headerlink" title="13. Quirks模式是什么？和Standards模式有何区别？"></a>13. Quirks模式是什么？和Standards模式有何区别？</h3>IE6以前的页面大家都不会去写DTD，所以IE6就假定，如果写了DTD，就意味着这个页面采用对css支持更好的布局，而如果没有的话，则采用兼容之前的布局方式。这就是Quirks模式（怪异模式，诡异模式，怪癖模式）.<br>区别：总体会有布局、样式解析和脚本执行三个方面的区别。</li>
+<li>盒模型： 在W3C标准中，如果设置一个元素的宽度和高度，指的是元素内容（content-box）的宽度和高度，在Quirks模式下，IE的宽高还包含了padding和border。</li>
+<li>设置行内元素的宽高： 在Standards模式下，给<code>&lt;spam&gt;</code>等行内元素设置宽高的都不会生效，在Quirks模式下，则会生效。</li>
+<li>设置百分比的高度： 在standards模式下，一个元素的高度是由其包含的内容决定的，如果父元素没有设置百分比的高度，子元素设置一个百分比的高度是无效的</li>
+<li>设置水平居中： 使用<code>margin: 0 auto</code>在Standards模式下可以是元素水平居中，但是在quirks模式下无效。</li>
+</ul>
+<h3 id="14-table的缺点"><a href="#14-table的缺点" class="headerlink" title="14. table的缺点"></a>14. table的缺点</h3><ul>
+<li>太深的嵌套，比如：<code>table&gt;tr&gt;td&gt;h3</code>，会导致搜索引擎读取困难，而且大大增加了代码的冗余。</li>
+<li>灵活性差，比如要将<code>tr</code>设置border等属性是不行的，需要通过<code>td</code></li>
+<li>代码臃肿，但在table中嵌套table的时候阅读代码会显得非常混乱</li>
+<li>混乱的<code>colspan</code>和<code>rowspan</code>,用来布局的时候，频繁使用会造成文档顺序的混乱。</li>
+<li>table需要多次计算才能确定好其在渲染树中节点的属性，通常需要花3倍等同于元素的时间</li>
+<li>不够语义</li>
+</ul>
+<h3 id="15-src和href的区别"><a href="#15-src和href的区别" class="headerlink" title="15. src和href的区别"></a>15. <code>src</code>和<code>href</code>的区别</h3><ul>
+<li><code>src</code>用于替换当前元素；href用于在当前文档和引用资源自减确立联系；</li>
+<li><code>src</code>是<code>source</code>的缩写，指向外部资源的位置，指向的内容将会嵌入当前标签所在的位置；</li>
+<li><code>href</code>是<code>Hypertext Reference</code>的缩写,指向网络资源所在的位置，建立当前元素（锚点）或当前文档（连接）之间的链接；</li>
+</ul>
+
+        </div>
+        <footer>
+            <p class="meta">
+                <span class="byline author vcard">Posted by <span class="fn">Bamboo Gan</span></span>
+                <time datetime="2018-03-06T14:44:39.352Z" data-updated="true">Tue Mar 06 2018</time>
+                
+            </p>
+            <div class="sharing">
+    
+        <a class="twitter-share-button"
+           href="https://twitter.com/intent/tweet?text=">
+            Tweet
+        </a>
+    
+</div>
+
+            <p class="meta">
+                
+                <a class="basic-alignment left" href="/2018/03/07/前端综合问题/index.html" title="Previous Post: ">« </a>
+                
+
+                
+                <a class="basic-alignment right" href="/2017/10/30/一个梦/index.html" title="Previous Post: 一个梦">一个梦 »</a>
+                
+            </p>
+        </footer>
+    </article>
+
+    
+        
+    
+
+</div>
+
+<aside class="sidebar">
+    <section class="odd">
+    <h1>Recent Posts</h1>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/03/07/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/07/前端综合问题/">前端综合问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/06/前端面试问题--HTML/">前端面试问题--HTML</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/30/一个梦/">一个梦</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/23/LESS学习笔记/">LESS学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/06/医道与医心：乱世医者端木蓉/">医道与医心：乱世医者端木蓉入世篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/27/JS特效/">JS特效</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/24/Jquery的ajax方法学习/">Jquery的ajax方法学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/05/关于自增（自减）运算的一点问题/">关于自增（自减）运算的一点问题</a></li></ul>
+</section>
+
+<section class="even">
+    <h1>Featured posts</h1>
+    <ul>
+        
+        <li class="post">
+            <a href="/2018/03/07/test/">test</a>
+        </li>
+        
+    </ul>
+</section><section class="odd">
+    <h1>GitHub Repos</h1>
+    <ul id="gh_repos">
+        <li class="loading">Status updating&#8230;</li>
+    </ul>
+
+    <a href="https://github.com/Bamboo-Gan">@Bamboo-Gan</a> on GitHub
+
+    <script>
+        $(document).ready(function(){
+            const options = {
+                user: 'Bamboo-Gan',
+                count: 0,
+                skip_forks: true,
+                target: '#gh_repos'
+            }
+
+            function escapeHtml(str) {
+                return $('<div/>').text(str).html();
+            }
+
+            function render(target, repos){
+                let i, fragment = '', t = $(target)[0];
+
+                for(i = 0; i < repos.length; i++) {
+                    fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><p>'+escapeHtml(repos[i].description||'')+'</p></li>';
+                }
+                t.innerHTML = fragment;
+            }
+
+            $.ajax({
+                url: "https://api.github.com/users/"+options.user+"/repos?sort=pushed&callback=?",
+                dataType: 'jsonp',
+                error: function (err) {
+                    $(options.target + ' li.loading').addClass('error').text("Error loading feed");
+                },
+                success: function(data) {
+                    var repos = [];
+                    if (!data || !data.data) { return; }
+                    for (var i = 0; i < data.data.length; i++) {
+                        if (options.skip_forks && data.data[i].fork) { continue; }
+                        repos.push(data.data[i]);
+                    }
+                    if (options.count) { repos.splice(options.count); }
+                    render(options.target, repos);
+                }
+            });
+        });
+    </script>
+</section>
+</aside>
+
+    </div>
+</div>
+
+<footer role="contentinfo">
+    <p>
+        Copyright © 2018 - Bamboo Gan -
+        <span class="credit">Generated using <a href="https://github.com/jbreckmckye/hexo-theme-octo">Octo theme</a> for <a href="http://hexo.io">Hexo</a></span>
+    </p>
+</footer>
+
+
+
+</body>
+</html>
