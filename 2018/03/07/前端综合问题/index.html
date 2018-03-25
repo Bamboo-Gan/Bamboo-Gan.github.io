@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="silverbamboo">
 <meta property="og:description" content="web前端综合问题1. 讲讲输完网址按下回车，到看到网页这个过程中发生了什么？ 域名解析 发起TCP的3次握手 建立TCP连接后发起http请求 服务器端相应http请求，浏览器得到html代码 浏览器解析html代码，并请求html代码中的资源 浏览器对页面进行渲染呈现给用户  2. 谈谈你对前端性能优化的理解 请求数量： 合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域 请求">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-06T17:16:16.403Z">
+<meta property="og:updated_time" content="2018-03-25T14:05:20.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="silverbamboo">
 <meta name="twitter:description" content="web前端综合问题1. 讲讲输完网址按下回车，到看到网页这个过程中发生了什么？ 域名解析 发起TCP的3次握手 建立TCP连接后发起http请求 服务器端相应http请求，浏览器得到html代码 浏览器解析html代码，并请求html代码中的资源 浏览器对页面进行渲染呈现给用户  2. 谈谈你对前端性能优化的理解 请求数量： 合并脚本和样式表，CSS Sprites，拆分初始化负载，划分主域 请求">
@@ -97,10 +97,8 @@
 <li>请求带宽： 开启GZip，精简JavaScript，移除重复脚本，图像优化，将icon做成字体</li>
 <li>缓存利用： 使用CDN，使用外部JavaScript和CSS，添加Expires头，减少DNS查找，配置ETag，使Ajax可缓存</li>
 <li>页面结构： 将样式放在顶部，将脚本放在底部，尽早刷新文档的输出</li>
-<li>代码校验： 避免css表达式，避免重定向</li>
-</ul>
-<p><strong><em>雅虎十四条</em></strong></p>
-<ul>
+<li>代码校验： 避免css表达式，避免重定向<a id="more"></a>
+<strong><em>雅虎十四条</em></strong></li>
 <li>减少HTTP请求</li>
 <li>使用CDN（content Delivery Network）内容分发网络</li>
 <li>增加Expires Header<ul>
@@ -186,15 +184,6 @@
 
     
 <nav id="article-nav">
-  
-    <a href="/2018/03/07/test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          test
-        
-      </div>
-    </a>
   
   
     <a href="/2018/03/06/前端面试问题--HTML/" id="article-nav-older" class="article-nav-link-wrap">

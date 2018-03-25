@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="silverbamboo">
 <meta property="og:description" content="前端面试题–HTML1. 浏览器的本地存储在HTML5中提供了sessionStorage和localStorage两种浏览器的本地存储方式。sessionStorage用于在本地存储一个会话(session)中的数据，这些数据只有在同一个会话中的页面才能访问并且会话结束之后数据也随之销毁，是会话级别的存储。localStorage用于持久化的本地存储，除非主动删除数据，否则数据是不会过期的。 2">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-06T16:52:10.461Z">
+<meta property="og:updated_time" content="2018-03-25T14:05:31.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="silverbamboo">
 <meta name="twitter:description" content="前端面试题–HTML1. 浏览器的本地存储在HTML5中提供了sessionStorage和localStorage两种浏览器的本地存储方式。sessionStorage用于在本地存储一个会话(session)中的数据，这些数据只有在同一个会话中的页面才能访问并且会话结束之后数据也随之销毁，是会话级别的存储。localStorage用于持久化的本地存储，除非主动删除数据，否则数据是不会过期的。 2">
@@ -91,9 +91,8 @@
 <li><code>cookie</code>需要指定作用域，不可以跨域调用</li>
 <li><code>web stroage</code>拥有<code>setltem</code>，<code>getltem</code>等方法,cookie需要前端开发者自己封装setCookie，getCookie</li>
 <li>cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在，而WebStroage津津是为了在本地“存储”数据而生</li>
-<li>IE6，7中的UserData通过简单的代码封装可以统一到所有的浏览器都支持web stroage</li>
-</ul>
-<h3 id="3-请谈谈cookie的弊端"><a href="#3-请谈谈cookie的弊端" class="headerlink" title="3. 请谈谈cookie的弊端"></a>3. 请谈谈cookie的弊端</h3><ul>
+<li>IE6，7中的UserData通过简单的代码封装可以统一到所有的浏览器都支持web stroage<a id="more"></a>
+<h3 id="3-请谈谈cookie的弊端"><a href="#3-请谈谈cookie的弊端" class="headerlink" title="3. 请谈谈cookie的弊端"></a>3. 请谈谈cookie的弊端</h3></li>
 <li>每个特定的域名下最多生成的cookie个数有限制</li>
 <li>IE和opera会清理近期最少使用的cookie，firefox会随机清理cookie</li>
 <li>cookie的最大字节约为4096字节，为了兼容性，一般不能超过4095字节</li>
