@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="silverbamboo">
 <meta property="og:description" content="本文讲述less的使用语法 关于注释1.less的注释跟js一样，不会被编译。2.有两种方法： //这是单行注释； /*这是多行注释，也是css的注释*/3.注意：如果使用css的注释，那么编译的时候，这个注释会被保留">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-30T01:27:00.529Z">
+<meta property="og:updated_time" content="2018-03-26T16:42:58.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LESS学习笔记">
 <meta name="twitter:description" content="本文讲述less的使用语法 关于注释1.less的注释跟js一样，不会被编译。2.有两种方法： //这是单行注释； /*这是多行注释，也是css的注释*/3.注意：如果使用css的注释，那么编译的时候，这个注释会被保留">
@@ -178,7 +178,11 @@
 <li><p>LESS 高级参数和@rest Variable</p>
 <blockquote>
 <ul>
-<li>.mixin(…) {        // matches 0-N arguments<br>-.mixin() {           // matches exactly 0 arguments<br>-.mixin(@a: 1) {      // matches 0-1 arguments<br>-.mixin(@a: 1; …) { // matches 0-N arguments<br>-.mixin(@a; …) {    // matches 1-N arguments<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>; <span class="variable">@rest</span>...) &#123;</div><div class="line">   <span class="comment">// @rest is bound to arguments after @a</span></div><div class="line">   <span class="comment">// @arguments is bound to all arguments</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>.mixin(…) {        // matches 0-N arguments</li>
+<li>.mixin() {           // matches exactly 0 arguments</li>
+<li>.mixin(@a: 1) {      // matches 0-1 arguments</li>
+<li>.mixin(@a: 1; …) { // matches 0-N arguments</li>
+<li>.mixin(@a; …) {    // matches 1-N arguments<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.mixin</span>(<span class="variable">@a</span>; <span class="variable">@rest</span>...) &#123;</div><div class="line">   <span class="comment">// @rest is bound to arguments after @a</span></div><div class="line">   <span class="comment">// @arguments is bound to all arguments</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
@@ -219,8 +223,9 @@
 </blockquote>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@path :</span> <span class="string">"//www.w3cschool.cn/less"</span>;</div><div class="line"><span class="keyword">@import</span> <span class="string">"@&#123;path&#125;/external1.less"</span>;</div><div class="line"><span class="selector-class">.myclass</span>&#123;</div><div class="line"> <span class="attribute">color </span>: <span class="number">#A52A2A</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>变量可以由属性引用。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@my-property:</span> color;</div><div class="line"><span class="selector-class">.myclass</span> &#123;</div><div class="line">  <span class="selector-tag">background-</span><span class="variable">@&#123;my-property&#125;</span>: <span class="selector-id">#81F7D8</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>变量可以由属性引用。</p>
 </blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@my-property:</span> color;</div><div class="line"><span class="selector-class">.myclass</span> &#123;</div><div class="line">  <span class="selector-tag">background-</span><span class="variable">@&#123;my-property&#125;</span>: <span class="selector-id">#81F7D8</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>变量名称</li>
 </ul>
